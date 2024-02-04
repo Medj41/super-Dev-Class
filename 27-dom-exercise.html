@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width initial-scale=1.0">
+  <title>Dom exercise</title>
+</head>
+<body>
+
+  <button>9a</button>
+  <button class="js-second-button">9b</button>
+
+<br>
+<br>
+
+  <button class="js-head-button" onclick="clcikedOptioon ('head')"> Heads </button>
+  <button class="js-tail-button" onclick="clcikedOptioon ('tail')" >Tails</button>
+  <p class="js-par"></p>
+
+  <input type="text" class="js-input" onkeydown="displayTheName (event)">
+  <input type="submit" class="js-submit" onkeydown="displayTheName(event)">
+  <p class="js-name" ></p>
+
+
+
+  <input type="text" class="js-enough" onkeyup="
+  
+  displayNaMe()
+  
+  
+  
+  ">
+<p class="js-disply"></p>
+  
+
+
+
+
+
+  
+</body>
+<script>
+let buttomElement = document.querySelector('button');
+console.log(buttomElement);
+
+let secButtongEl = document.querySelector('.js-second-button')
+ .innerHTML = '9b done'
+
+function clcikedOptioon (choice){
+  // let headButtong = document.querySelector('.js-head-button');
+  // let tailButtong = document.querySelector('.js-tail-button');
+  let pardisply = document.querySelector('.js-par');
+   if (choice === 'head') {
+    pardisply.innerHTML = ` You chose: heads `
+   } else if (choice === 'tail') {
+    pardisply.innerHTML = ` You chose: tails `
+   }
+}
+
+
+function displayTheName (event) {
+
+
+if (event.key === 'Enter') {
+  let typedNmae = document.querySelector('.js-input');
+let inputName = typedNmae.value ;
+document.querySelector('.js-name')
+ .innerHTML = `Your name is: ${inputName}`;
+ console.log(typedNmae)
+}
+
+}
+
+
+
+
+
+
+
+function displayNaMe(){
+  let InputNAme = document.querySelector('.js-enough').value;
+
+document.querySelector('.js-disply')
+.innerHTML = InputNAme;
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <button onclick="
+      myChoise('heads');
+      ">
+    heads
+  </button>
+
+  <button onclick="
+     myChoise('tails');
+    ">
+    tails
+  </button>
+
+
+
+
+
+
+  <script>
+
+
+
+
+
+
+
+    let score = JSON.parse(localStorage.getItem('score'));
+
+    function myChoise(a) {
+
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+      console.log(result);
+
+      if (a === result) {
+        score.wins += 1, score.round = 'you won'
+      } else {
+        score.losses += 1, score.round = 'you won'
+      };
+
+      alert(
+        `You chose ${a}, Computer chose ${result}
+                      ${score.round}          
+        You win! ${score.wins} You lose!  ${score.losses}`)
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // alert(guess === result ? (`You win! ${score.wins = ++}`) : (`You lose!  ${score.losed = ++}`));
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

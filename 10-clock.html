@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+</head>
+<body>
+  
+
+
+
+
+
+
+<script>
+const hour = 14 ;
+let greeting = '';
+
+if (hour >= 6 && hour <= 12) {
+  greeting = 'Good Morning';
+  console.log(greeting);
+} else if(hour >= 13 && hour <= 17 ){
+  greeting = 'Good Afternoon';
+  console.log(greeting);
+}else {
+  greeting = 'Good Night';
+  console.log(greeting);
+}
+
+const name = 'Larbi';
+console.log( `${greeting}  ${name} `);
+
+console.log('2nd part');
+
+
+const age = 5;
+const isHoliday = true;
+
+if ((age <= 6 || age >= 56) && !isHoliday) {
+  console.log('Discount');
+}else {
+  console.log('No Discount');
+}
+
+console.log('3rd part');
+
+let head = Math.random();
+let result ;
+let guess = 'Head';
+
+
+if (head >= 0 && head <= 0.50) {
+  result = ('Head');
+}else{
+  result = ('Tail');
+}
+
+console.log(result)
+alert(guess == result ? 'You Won' : 'You lose');
+
+
+
+
+// const message = 5 && 'hello';
+// console.log(message)
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

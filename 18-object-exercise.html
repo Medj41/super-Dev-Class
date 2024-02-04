@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+      updateCart(1);
+      
+    ">Add to Cart</button>
+
+    <button onclick="
+      updateCart(2);
+    ">+2</button>
+
+    <button onclick="
+       updateCart(3);
+    ">+3</button>
+
+    <button onclick="
+       updateCart(4);
+    ">+4</button>
+
+    <button onclick="
+       updateCart(5);
+    ">+5</button>
+
+    <!-- vvv This code was changed. vvv -->
+    <button onclick="
+      updateCart(-1);
+    ">Remove from cart</button>
+
+    <button onclick="
+      updateCart(-2);
+    ">-2</button>
+
+    <button onclick="
+     updateCart(-3);
+    ">-3</button>
+    <!-- ^^^ This code was changed. ^^^ -->
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+      
+    ">Reset Cart</button>
+
+    <script>
+      const basketballProduct = {
+        name: 'basketball',
+        price: 2095,
+      };
+      const footballProduct = {
+        name: 'fasketball',
+        price: 2000,
+      };
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095, 
+
+      };
+
+
+      const greeting = 'Good Morning';
+
+      console.log(greeting.toLocaleLowerCase());
+      console.log(greeting.repeat(3));
+
+
+
+
+
+
+
+
+
+
+
+    //   function isSameProduct(product1, product2){
+    //   return (product1.name === product2.name && product1.price === product2.price ) ;
+
+    // }
+    // console.log(isSameProduct(basketballProduct, footballProduct));
+    // console.log(isSameProduct(basketballProduct, product3));
+
+
+
+
+
+  //     basketballProduct.price += 500;
+  //     console.log(basketballProduct.price);
+
+  //     basketballProduct['delivery-time'] = '3 days';
+  //   console.log(basketballProduct);
+
+  //   function comparePrice(product1, product2){
+      
+  //     if (product1.price < product2.price) {
+  //     lowestPrice = product1;
+
+  //     }else if(product1.price > product2.price){
+  //     lowestPrice = product2;
+  //   }
+
+   
+  //   return lowestPrice;
+   
+  // }
+  
+  
+  //   console.log(comparePrice(basketballProduct, footballProduct));
+  
+    // newfunction 
+
+    // function isSameProduct(product1, product2){
+    //   return (product1.name === product2.name && product1.price === product2.pric ) ;
+
+    // }
+    // console.log(isSameProduct(basketballProduct, footballProduct));
+    // console.log(isSameProduct(basketballProduct, product3));
+
+      let cartQuantity = 0;
+      function updateCart(input){
+        
+        if (cartQuantity + input >= 10) {
+          alert('The cart is full');
+        }else if (cartQuantity + input <= 0) {
+          alert('Not enough items in the cart');
+        }else{
+          cartQuantity += input
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+
+       
+      }
+
+
+
+
+      
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full');
+
+        } else if (cartQuantity + change < 0) {
+          alert('Not enough items in the cart');
+
+        } else {
+          cartQuantity += change;
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+      }
+
+    </script>
+  </body>
+</html>
